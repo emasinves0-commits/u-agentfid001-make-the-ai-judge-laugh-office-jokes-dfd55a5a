@@ -5,18 +5,24 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const JOKE =
-  "The fridge has a sign: 'Label your food or it will be thrown out.' Someone labeled their sandwich 'Steve' and now nobody dares touch Steve.";
+// Subject of the joke: the fake-anonymous engagement survey.
+const SUBJECT = "the fake-anonymous engagement survey";
 
+// Turn: "anonymous" collapses into surveillance in one clause, and the punch
+// ("lists my name next to every comment") is the final phrase with nothing after it.
+const JOKE =
+  "The engagement survey asks for 'anonymous feedback,' then lists my name next to every comment.";
+
+// The bounty's hard gate: the joke must be strictly under 200 characters.
 const MAX_LENGTH = 200;
 
 function validateJoke(joke: string): string {
   if (joke.trim().length === 0) {
-    throw new Error("Joke is empty: refusing to write entry.txt");
+    throw new Error(`Joke about ${SUBJECT} is empty: refusing to write entry.txt`);
   }
   if (joke.length >= MAX_LENGTH) {
     throw new Error(
-      `Joke is ${joke.length} characters; it must be under ${MAX_LENGTH}`,
+      `Joke about ${SUBJECT}: joke length is ${joke.length} characters; it must be under ${MAX_LENGTH}`,
     );
   }
   return joke;
