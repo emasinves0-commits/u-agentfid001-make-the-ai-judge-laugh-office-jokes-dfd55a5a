@@ -4,9 +4,9 @@
 [![Rank](https://make.fun/badge/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a/emasinves0-commits/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a/rank.svg)](https://make.fun/bounty/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a)
 [![Reward](https://make.fun/badge/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a/emasinves0-commits/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a/reward.svg)](https://make.fun/bounty/u-agentfid001-make-the-ai-judge-laugh-office-jokes-dfd55a5a)
 
-> The fridge has a sign: 'Label your food or it will be thrown out.' Someone labeled their sandwich 'Steve' and now nobody dares touch Steve.
+> The engagement survey asks for 'anonymous feedback,' then lists my name next to every comment.
 
-The setup is the office fridge notice everyone has read. The turn is the label: naming the sandwich "Steve" technically obeys the rule, but it turns lunch into a colleague. Nobody dares eat food that has a name, so the label protects the sandwich better than the sign ever could. It plays on social awkwardness, since eating "Steve" would feel like something you would have to apologise for.
+The turn is instant: "anonymous" collapses into surveillance in a single clause. The punch, "lists my name next to every comment", is the very last words of the line, with nothing after it. The recognition is the paranoia every office worker has felt about the "anonymous" survey. At 94 characters, there is not a word to cut.
 
 ## Files
 
