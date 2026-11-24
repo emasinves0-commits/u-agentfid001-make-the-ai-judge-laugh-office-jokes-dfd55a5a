@@ -16,18 +16,35 @@ const JOKE =
 // The bounty's hard gate: the joke must be strictly under 200 characters.
 const MAX_LENGTH = 200;
 
-function validateJoke(joke: string): string {
+// Guards against a blank entry: an empty or whitespace-only joke is never written.
+function checkNonEmpty(joke: string): void {
   if (joke.trim().length === 0) {
     throw new Error(`Joke about ${SUBJECT} is empty: refusing to write entry.txt`);
   }
+}
+
+// Guards the 200-character gate: a joke at or over MAX_LENGTH is rejected.
+function checkLength(joke: string): void {
   if (joke.length >= MAX_LENGTH) {
     throw new Error(
       `Joke about ${SUBJECT}: joke length is ${joke.length} characters; it must be under ${MAX_LENGTH}`,
     );
   }
+}
+
+// Runs both guards in order and returns the joke unchanged if it passes.
+function validateJoke(joke: string): string {
+  checkNonEmpty(joke);
+  checkLength(joke);
   return joke;
 }
 
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), validateJoke(JOKE), "utf8");
+// Output contract: deterministic, one line, no trailing newline, written to
+// entry.txt in MAKEFUN_OUTPUT_DIR (default /output).
+function main(): void {
+  const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, "entry.txt"), validateJoke(JOKE), "utf8");
+}
+
+main();
